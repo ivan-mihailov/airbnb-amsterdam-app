@@ -4,7 +4,7 @@ import streamlit as st
 
 # Display title and text
 st.title("Week 1 - Data and visualization")
-st.markdown("Here we can see the dataframe created during this weeks project.")
+st.markdown("Here we can see the dataframe created during this week's project.")
 
 # Read dataframe
 dataframe = pd.read_csv(
@@ -32,8 +32,22 @@ dataframe["Location"] = dataframe["Location"].replace(
     {1.0: "To visit", 0.0: "Airbnb listing"}
 )
 
+# CSS to inject contained in a string
+hide_dataframe_row_index = """
+            <style>
+            .row_heading.level0 {display:none}
+            .blank {display:none}
+            </style>
+            """
+
+# Inject CSS with Markdown
+st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
+
 # Display dataframe and text
+link = '[Brewery](https://www.brouwerijhetij.nl/windmill-tap-room/?lang=en)'
 st.dataframe(dataframe)
+st.markdown("The location we've chosen is the Brouwerij‘t IJ brewery next to the De Gooyer Windmill")
+st.markdown(link, unsafe_allow_html=True)
 st.markdown("Below is a map showing all the Airbnb listings with a red dot and the location we've chosen with a blue dot.")
 
 # Create the plotly express figure
