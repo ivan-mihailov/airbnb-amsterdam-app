@@ -36,7 +36,7 @@ dataframe["Location"] = dataframe["Location"].replace(
 link = '[Check It Out!](https://www.brouwerijhetij.nl/windmill-tap-room/?lang=en)'
 st.dataframe(dataframe)
 st.markdown("The location we've chosen is the Brouwerij‘t IJ brewery next to the De Gooyer Windmill")
-st.markdown("<h4 style='text-align: center'>link</h2>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center'>Brouwerij‘t IJ Brewery</h4>", link, unsafe_allow_html=True)
 st.markdown("Below is a map showing all the Airbnb listings with a red dot and the location we've chosen with a blue dot.")
 
 # Create the plotly express figure
