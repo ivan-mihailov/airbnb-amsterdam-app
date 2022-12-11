@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 # Display title and text
-st.title("Distance of Amsterdam AirBnB listings from our Chosen Location.")
+st.title("Amsterdam AirBnB listings Visualization")
 st.markdown("Here we can see the dataframe created during this week's project.")
 
 # Read dataframe
